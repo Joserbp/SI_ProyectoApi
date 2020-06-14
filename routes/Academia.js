@@ -28,6 +28,13 @@ router.post('/', function(req, res, next) {
 
 });
 
+router.get('/', function(req, res, next) {
+  Academia.find({},function(err,data){
+    res.status(200).json(data);
+  });
+
+});
+
 
 
 module.exports = router;
