@@ -7,6 +7,20 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+// Conexión a Mongoose
+var mongoose = require('mongoose');
+var Autos= require('./models/Academia.js');
+var user='';
+var password='';
+
+mongoose.connect('mongodb+srv://'+user+':'+password+'@', {
+  useNewUrlParser: true
+}).then(() => { console.log('Conectado a Mongo DB Atlas')})
+.catch(err => console.log(err));
+
+var indexRouter = require('./routes/index');
+var academiaRouter=require('./routes/Academia.js');
+
 var app = express();
 
 // view engine setup
