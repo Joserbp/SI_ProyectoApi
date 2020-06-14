@@ -9,11 +9,11 @@ var usersRouter = require('./routes/users');
 
 // Conexión a Mongoose
 var mongoose = require('mongoose');
-var Autos= require('./models/Academia.js');
-var user='';
-var password='';
+var Academia = require('./models/Academia.js');
+var user='eca';
+var password='njZ66cif9ZF5J98O';
 
-mongoose.connect('mongodb+srv://'+user+':'+password+'@', {
+mongoose.connect('mongodb+srv://'+user+':'+password+'@cluster1-ysvwf.gcp.mongodb.net/<API>?retryWrites=true&w=majority', {
   useNewUrlParser: true
 }).then(() => { console.log('Conectado a Mongo DB Atlas')})
 .catch(err => console.log(err));
