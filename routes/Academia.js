@@ -35,6 +35,17 @@ router.get('/', function(req, res, next) {
 
 });
 
+router.get('/:academiaId',(req,res,next)=>{
+  Academia.findOne({'_id':req.params.academiaId}, (err,datos)=>{
+    if(datos == null){
+      res.status(404).json({"mensaje":"no encontrado"});
+
+    }else{
+      res.status(200).json(datos);
+    }
+  });
+});
+
 
 
 module.exports = router;
