@@ -8,8 +8,8 @@ var AcademiaSchema = Schema({
 	Ritmo_Principal: String,
 	Ritmo_Secundario: String,
 	Direccion: String,
-	#Profesores: Number,
-	#Alumnos: Number,
+	num_Profesores: Number,
+	num_Alumnos: Number,
 });
 
 module.exports = mongoose.model('Academia de Baile', AcademiaSchema);
