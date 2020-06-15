@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <title> Academias </title>
+      <style >
+          body {
+              background-color: rgb(218, 213, 213);
+          }
+          h6 { font: 100% sans-serif;
+              color: rgb(24, 34, 23);
+              text-align: center;
+          }
+          h3 { font: 150% cursive;
+                color: rgb(1, 136, 12);
+                text-align: center;
+            }
+          h1 { font: 200% cursive;
+                color: rgb(54, 172, 50);
+                text-align: center;
+            }
+      </style>
+  </head>
+<body>
+   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" >
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Aragon_Jonhy_corel.jpg " width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+           API-ESCUELA DE BAILE </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+        </div>
+    </nav>
+
+    <div class="container">
+      <h1> ACADEMIAS DISPONIBLES </h1>
+
+    <div class="row">
+      
+      {{#each Academia}}
+      <div class="col-sm">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://cdn.dribbble.com/users/632028/screenshots/3645059/dancee.png" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="card-title"> {{Nombre}} </h3>
+              <h6 > ID: {{Id}} </h6>
+              <h6 > Director: {{Director}} </h6>
+              <h6 > Ritmo Principal: {{Ritmo_Principal}} </h6>
+              <h6 > Ritmo Secundario: {{Ritmo_Secundario}} </h6>
+              <h6 > Dirección: {{Direccion}} </h6>
+              <h6 > N.Profesores: {{num_Profesores}} </h6>
+              <h6 > N.Alumnos: {{num_Alumnos}} </h6>
+              <br></br>
+              
+            </div>
+            <br></br>
+        </div>
+        <br></br>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</body>
