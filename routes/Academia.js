@@ -50,7 +50,7 @@ router.get('/:academiaId',(req,res,next)=>{
 //DELETE por ID
 router.delete('/:academiaId', function(req, res, next) {
   Academia.findOneAndDelete({
-        id: req.params.academiaId
+        '_id': req.params.academiaId
   }, function(err, data) {
      if (err) {
       res.status(404).json(err);
@@ -67,7 +67,7 @@ router.delete('/',function(req,res,next){
 //PUT por ID
 router.put('/:academiaId',function(req, res, error){
     let update =req.body;
-    Academia.replaceOne({ id: req.params.academiaId}, update, function(err, data){
+    Academia.replaceOne({ 'Id': req.params.academiaId}, update, function(err, data){
     if(err){
       res.status(404).json({mensaje: "Ese ID no existe en la base."});
     } else{
@@ -84,7 +84,7 @@ router.put('/', function (req, res){
 //PATCH por ID
 router.patch('/:academiaId',function(req, res, error){
   let update =req.body;
-  Academia.findOneAndUpdate({ id: req.params.academiaId }, update, function(err, data){
+  Academia.findOneAndUpdate({ '_id': req.params.academiaId }, update, function(err, data){
     if(err){
       res.status(404).json({mensaje: "No se encontro Id"});
     } else{
