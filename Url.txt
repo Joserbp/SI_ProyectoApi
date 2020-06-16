@@ -1,0 +1,17 @@
+-------------------GITHUB--------------------
+
+https://github.com/Joserbp/SI_ProyectoApi
+
+-------------------HEROKU--------------------
+
+https://api-academia-de-baile.herokuapp.com/
+
+-------------------API-REST------------------
+
+
+https://api-academia-de-baile.herokuapp.com/api/academia  (GET ---> JSON)
+https://api-academia-de-baile.herokuapp.com/api/academia/get (GET---> HTML)
+
+https://api-academia-de-baile.herokuapp.com/api/academia/post (POST ---> FORM)  
+
+https://api-academia-de-baile.herokuapp.com/api/academia (PUT , PATCH , DELETE  ---> POSTMAN )
